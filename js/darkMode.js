@@ -1,5 +1,5 @@
 let darkmode = true;
-setInterval(function setDarkMode(){
+function setDarkMode(){
     darkmode = !darkmode;
     if(darkmode){
         document.body.classList.remove('light');
@@ -7,4 +7,4 @@ setInterval(function setDarkMode(){
     else{
         document.body.classList.add('light');
     }
-}, 5000);
+}
