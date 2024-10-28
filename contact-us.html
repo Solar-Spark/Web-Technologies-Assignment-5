@@ -9,6 +9,15 @@
             .error{
                 color:red;
             }
+            .form-step {
+                display: none;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            }
+            .form-step.active {
+                display: block;
+                opacity: 1;
+            }
         </style>
     </head>
     <body>
@@ -29,20 +38,40 @@
         </header>
         <main>
             <div id="darkmode-btn" onclick="setDarkMode()"></div>
-            <form id="contactForm" method="POST" class="contact-form" novalidate>
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                <span class="error" id="nameError"></span>
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                <span class="error" id="emailError"></span>
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
-                <span class="error" id="subjectError"></span>
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
-                <span class="error" id="messageError"></span><br>
-                <button type="submit">Send Message</button>
+            <div id="clock-btn" onclick="showTime()"><img src="Images/time.png"></div>
+            <div id="time-block" class="time-hide"></div>
+            <form id="multiStepForm" novalidate>
+                <!-- Step 1 -->
+                <div class="form-step active" id="step1">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error" id="nameError"></span>
+                    <button type="button" onclick="nextStep()">Next</button>
+                </div>
+                <!-- Step 2 -->
+                <div class="form-step" id="step2">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error" id="emailError"></span>
+                    <button type="button" onclick="previousStep()">Back</button>
+                    <button type="button" onclick="nextStep()">Next</button>
+                </div>
+                <!-- Step 3 -->
+                <div class="form-step" id="step3">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                    <span class="error" id="subjectError"></span>
+                    <button type="button" onclick="previousStep()">Back</button>
+                    <button type="button" onclick="nextStep()">Next</button>
+                </div>
+                <!-- Step 4 -->
+                <div class="form-step" id="step4">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error" id="messageError"></span>
+                    <button type="button" onclick="previousStep()">Back</button>
+                    <button type="submit">Submit</button>
+                </div>
             </form>
         </main>
         <footer>
