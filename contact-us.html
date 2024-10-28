@@ -40,6 +40,7 @@
             <div id="darkmode-btn" onclick="setDarkMode()"></div>
             <div id="clock-btn" onclick="showTime()"><img src="Images/time.png"></div>
             <div id="time-block" class="time-hide"></div>
+<<<<<<< HEAD
             <form id="multiStepForm" novalidate>
                 <!-- Step 1 -->
                 <div class="form-step active" id="step1">
@@ -72,6 +73,22 @@
                     <button type="button" onclick="previousStep()">Back</button>
                     <button type="submit">Submit</button>
                 </div>
+=======
+            <form id="contactForm" method="POST" class="contact-form" novalidate>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <span class="error" id="nameError"></span>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <span class="error" id="emailError"></span>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+                <span class="error" id="subjectError"></span>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+                <span class="error" id="messageError"></span><br>
+                <button type="submit">Send Message</button>
+>>>>>>> f62a39d8a26f2c9b6572b6df7919411591f2d3ca
             </form>
         </main>
         <footer>
