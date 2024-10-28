@@ -312,14 +312,14 @@ h2 {
     margin-top: 20px;
 }
 #darkmode-btn{
-    width: 3rem;
-    height: 3rem;
+    width: 50px;
+    height: 50px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: #898989 0 0 1vw;
     position: fixed;
-    left: 3rem;
-    bottom: 3rem;
+    left: 40px;
+    bottom: 40px;
     z-index: 1000;
 }
 
@@ -430,47 +430,3 @@ button.complete-btn {
     cursor: pointer;
 }
 
-#clock-btn{
-    width: 3rem;
-    height: 3rem;
-    background-color: #d61818;
-    border-radius: 10px;
-    box-shadow: #9e1111 0 0 1vw;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 3rem;
-    bottom: 3rem;
-    z-index: 1000;
-}
-#clock-btn img{
-    display: flex;
-    width: 1.7rem;
-    height: 1.7rem;
-}
-.time-show{
-    width: 10rem;
-    height: 4rem;
-    background-color: #2f2f2f;
-    border-radius: 10px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 3rem;
-    bottom: 8rem;
-    z-index: 1000;
-}
-.time-hide{
-    width: 10rem;
-    height: 4rem;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 3rem;
-    bottom: 8rem;
-    opacity: 0;
-    z-index: 1000;
-}
