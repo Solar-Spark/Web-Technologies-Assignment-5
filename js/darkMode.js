@@ -1,10 +1,22 @@
-let darkmode = true;
+let darkMode = true
+if(localStorage.getItem("darkTheme") == "dark"){
+    document.body.classList.remove('light');
+}
+else if(localStorage.getItem("darkTheme") == "light"){
+    document.body.classList.add('light');
+}
+
 function setDarkMode(){
-    darkmode = !darkmode;
-    if(darkmode){
-        document.body.classList.remove('light');
+    if (localStorage.getItem('darkTheme') == null) {
+        localStorage.setItem("darkTheme", "dark")
     }
-    else{
+
+    if(localStorage.getItem("darkTheme") == "dark"){
         document.body.classList.add('light');
+        localStorage.setItem("darkTheme", "light");
+    }
+    else if (localStorage.getItem("darkTheme") == "light"){
+        document.body.classList.remove('light');
+        localStorage.setItem("darkTheme", "dark");
     }
 }

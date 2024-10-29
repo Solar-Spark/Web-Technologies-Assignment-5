@@ -1,18 +1,33 @@
+const timeBlock = document.querySelector("#time-block");
+const timeText = document.querySelector("#time-text");
+const timeGreeting = document.querySelector("#time-greeting");
 setInterval(function(){
     let date = new Date();
-    document.getElementById("time-block").innerHTML = date.toLocaleTimeString();
+    if(date.getHours() >= 4 && date.getHours() < 12){
+        timeGreeting.textContent = "Good Morning"; 
+    }
+    else if(date.getHours() >= 12 && date.getHours() < 18){
+        timeGreeting.textContent = "Good Day";
+    }
+    else if(date.getHours() >= 18 && date.getHours() < 23){
+        timeGreeting.textContent = "Good Evening";
+    }
+    else if (date.getHours() >= 23 && date.getHours() < 4){
+        timeGreeting.textContent = "Good Night";
+    }
+    timeText.innerHTML = date.toLocaleTimeString();
     document.getElementById("clock").innerHTML = date.toLocaleDateString();
     }, 1000);
-let blockVisibility = false;
+let blockVisibility = true;
 function showTime(){
     if(blockVisibility){
-        document.getElementById("time-block").classList.remove('time-hide');
-        document.getElementById("time-block").classList.add('time-show');
+        timeBlock.classList.remove('time-hide');
+        timeBlock.classList.add('time-show');
         blockVisibility = !blockVisibility;
     }
     else{
-        document.getElementById("time-block").classList.remove('time-show');
-        document.getElementById("time-block").classList.add('time-hide');
+        timeBlock.classList.remove('time-show');
+        timeBlock.classList.add('time-hide');
         blockVisibility = !blockVisibility;
     }
 }

@@ -39,8 +39,12 @@
         <main>
             <div id="darkmode-btn" onclick="setDarkMode()"></div>
             <div id="clock-btn" onclick="showTime()"><img src="Images/time.png"></div>
-            <div id="time-block" class="time-hide"></div>
-            <form id="multiStepForm" novalidate>
+            <div id="time-block" class="time-hide">
+                <h3 id="time-greeting">Good </h3>
+                <p id="time-text"></p>
+            </div>
+            <section class="about-section">
+                <form id="multiStepForm" novalidate>
                 <!-- Step 1 -->
                 <div class="form-step active" id="step1">
                     <label for="name">Your Name</label>
@@ -73,6 +77,7 @@
                     <button type="submit">Submit</button>
                 </div>
             </form>
+        </section>
         </main>
         <footer>
             <div class="team-members">

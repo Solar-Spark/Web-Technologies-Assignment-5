@@ -24,9 +24,17 @@
         </header>
         <div id="darkmode-btn" onclick="setDarkMode()"></div>
         <div id="clock-btn" onclick="showTime()"><img src="Images/time.png"></div>
-        <div id="time-block" class="time-hide"></div>
+        <div id="time-block" class="time-hide">
+            <h3 id="time-greeting">Good </h3>
+            <p id="time-text"></p>
+        </div>
         <div class="to-do-wrapper">
             <section class="form-section">
+                <div id="recommend-film">
+                    <h1>We can help you to make a choice</h1>
+                    <div id="recommend-txt">Click the button to make recomendation</div>
+                    <button id="recommend-btn">Recommend</button>
+                </div>
                 <h1>Watch later</h1>
                 <div class="todo-container">
                     <input type="text" id="task-input" placeholder="Enter a new film" />
@@ -44,5 +52,6 @@
         <script src="js/todowishlist.js"></script>
         <script src="js/darkMode.js"></script>
         <script src="js/keyboardNavigation.js"></script>
+        <script src="js/recommendFilm.js"></script>
     </body>
 </html>
