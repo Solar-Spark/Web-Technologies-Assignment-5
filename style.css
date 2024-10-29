@@ -11,6 +11,7 @@
 body{
     background: #020307;
     color: #fff;
+    transition: all 0.3s;
 }
 header{
     background-color: #050813;
@@ -38,6 +39,7 @@ select{
     border-radius: 0.5rem;
     background-color: #222;
     color: #bcbcbc;
+    transition: all 0.3s;
 }
 button:hover{
     background: #9c1111;
@@ -90,6 +92,7 @@ section{
     display: flex;
     align-items: center;
     background: rgb(2, 3, 7,0.5);
+    transition: all 0.3s;
 }
 .image-frame-showcase img{
     position: absolute;
@@ -269,6 +272,7 @@ main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
+    transition: all 0.3s;
 }
 
 .contact-form label {
@@ -286,6 +290,7 @@ input, textarea{
     box-sizing: border-box;
     background-color: #222;
     color: #bcbcbc;
+    transition: all 0.3s;
 }
 
 .contact-form button {
@@ -308,6 +313,7 @@ input, textarea{
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
 }
 
 h2 {
@@ -324,24 +330,29 @@ h2 {
     left: 3rem;
     bottom: 3rem;
     z-index: 1000;
+    transition: all 0.3s;
 }
 
 /*Light theme*/
 
 body.light{
     background-color: #f1f1f1;
-    color:#000000
+    color:#000000;
+    transition: all 0.3s;
 }
 .light form, .light .about-section{
     background-color: #d4d4d4;
+    transition: all 0.3s;
 }
 .light input, .light textarea, .light select{
     background-color: #afafaf;
     border: 1px solid #575757;
     color: #000;
+    transition: all 0.3s;
 }
 .light #darkmode-btn{
     background-color: #1f1f1f;
+    transition: all 0.3s;
 }
 #clock{
     color: #fff;
@@ -363,11 +374,13 @@ body.light{
     width: 50%;
     height: 70%;
     text-align: center;
+    transition: all 0.3s;
 }
 
 .light .form-section {
     color: #000000;
     background-color: #d4d4d4;
+    transition: all 0.3s;
 }
 
 .to-do-wrapper {
@@ -390,6 +403,7 @@ body.light{
 
 .light  #task-input::placeholder {
     color: #555353;
+    transition: all 0.3s;
 }
 
 #add-task-btn {
@@ -409,15 +423,18 @@ body.light{
     padding: 10px;
     background-color: #222;
     border-radius: 4px;
+    transition: all 0.3s;
 }
 
 .light .task-item {
     background-color: #afafaf;
+    transition: all 0.3s;
 }
 
 .task-item.completed {
     text-decoration: line-through;
     color: #979191;
+    transition: all 0.3s;
 }
 
 button.delete-btn {
@@ -456,7 +473,8 @@ button.complete-btn {
 .time-show{
     width: 10rem;
     height: 6rem;
-    background-color: #2f2f2f;
+    background-color: #3b3b3b;
+    box-shadow: #363636 0 0 1vw;
     border-radius: 10px;
     position: fixed;
     display: flex;
@@ -467,9 +485,11 @@ button.complete-btn {
     bottom: 8rem;
     z-index: 1000;
     padding: auto 0;
+    transition: all 0.3s;
 }
 .light .time-show{
     background-color: #cecece;
+    transition: all 0.3s;
 }
 .time-hide{
     width: 10rem;
@@ -483,6 +503,7 @@ button.complete-btn {
     bottom: 8rem;
     opacity: 0;
     z-index: 1000;
+    transition: all 0.3s;
 }
 
 .container {
@@ -524,24 +545,3 @@ button.complete-btn {
     margin: 2rem 0;
 }
 
-/* Keyframes for animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
